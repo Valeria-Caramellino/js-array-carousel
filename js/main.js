@@ -37,13 +37,13 @@ box.append(card4);
 //creazione bottoni
 let buttonGo = document.createElement ("button");
 buttonGo.type = buttonGo;
-buttonGo.innerHTML = '>';
+buttonGo.innerHTML = '▲';
 buttonGo.className = "btnAvanti btnStyle";
 box.append(buttonGo);
 
 let buttonBeck = document.createElement ("button");
 buttonBeck.type = buttonBeck;
-buttonBeck.innerHTML = '<';
+buttonBeck.innerHTML = '▼';
 buttonBeck.className = "btnIndietro btnStyle";
 box.append(buttonBeck);
 
@@ -51,3 +51,41 @@ box.append(buttonBeck);
 let cardElements = document.getElementsByClassName("card");
 let inizioCard = 0;
 
+//bottone avanti
+buttonGo.addEventListener("click", function(){
+    if(inizioCard < 4) {
+        for (let c = 0; c < cardElements.length; c++) {
+            const carte = cardElements[c];
+
+            if(c == inizioCard+1 ) {
+                carte.classList.remove("hidden");
+            } else {
+                carte.classList.add("hidden");  
+            }
+        }
+        inizioCard++;
+    } else {
+        console.log("non c'è una slide successiva");
+    }
+});
+
+//bottone indietro
+buttonBeck.addEventListener("click", function(){
+
+    if(inizioCard>0) {
+        for (let c = 0; c < cardElements.length; c++) {
+                const carte = cardElements[c];
+
+            if(c == inizioCard-1 ) {
+                carte.classList.remove("hidden");
+            } else {
+                carte.classList.add("hidden");
+            }
+        }
+        
+        inizioCard--;
+    } else {
+        console.log("non c'è una slide precedente");
+    }
+
+});
