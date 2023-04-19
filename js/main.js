@@ -34,7 +34,20 @@ card4.className = "card hidden";
 card4.src="img/05.webp";
 box.append(card4);
 
+//creazione bottoni
+let buttonGo = document.createElement ("button");
+buttonGo.type = buttonGo;
+buttonGo.innerHTML = '>';
+buttonGo.className = "btnAvanti btnStyle";
+box.append(buttonGo);
+
+let buttonBeck = document.createElement ("button");
+buttonBeck.type = buttonBeck;
+buttonBeck.innerHTML = '<';
+buttonBeck.className = "btnIndietro btnStyle";
+box.append(buttonBeck);
 
 //raggruppo le card 
 let cardElements = document.getElementsByClassName("card");
 let inizioCard = 0;
+

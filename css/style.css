@@ -14,6 +14,7 @@
     width: 50vw;
     height: 50vh;
     background-color: white;
+    position: relative;
 }
 .card{
     object-fit: cover;
@@ -21,7 +22,29 @@
     height: 100%;
     display: block;
     
+    
 }
 .hidden{
     display: none;
+}
+.btnAvanti {
+    position: absolute;
+    right: 0;
+    top: 45%;
+    
+}
+.btnStyle{
+    font-size: 14px;
+    margin: 8px;
+    padding: 0 10px;
+    line-height: 2;
+    background-color: darkorange;
+    color: #222;
+    border: solid black 2px;
+}
+.btnIndietro {
+    position: absolute;
+    left: 0;
+    top: 45%;
+   
 }
